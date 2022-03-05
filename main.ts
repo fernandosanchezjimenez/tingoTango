@@ -1,5 +1,4 @@
 radio.onReceivedNumber(function (receivedNumber) {
-    basic.showNumber(receivedNumber)
     tiempo = receivedNumber
     basic.pause(tiempo)
     music.playMelody("C5 B C5 - - - - - ", 120)
@@ -10,6 +9,7 @@ radio.onReceivedNumber(function (receivedNumber) {
 })
 input.onButtonPressed(Button.A, function () {
     send = randint(5000, 30000)
+    basic.showNumber(send / 1000)
     radio.sendNumber(send)
     music.playMelody("E B C5 A B G A F ", 120)
 })
